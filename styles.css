@@ -1,134 +1,104 @@
-body{
+body {
     min-height: 100vh;
-    width:auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 10px;
     margin: 0;
-
-    background-color:white;
+    background-color: white;
 }
 
-
-
-main{
-    flex:1;
-   
-}
-
-div.login{
-
-    align-self: center;
-    justify-content: center;
-    
-}
-div.loginbox{
-    align-self: center;
-    background-color: aliceblue;
-    text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 10px;
-    margin: 5%;
-    display: flex;
-    flex-direction:column;
-    border: 4px solid aliceblue;
-    border-radius: 40px;
-    height: 50vh;
-    box-shadow: 2px 2px 5px black, -2px -2px 5px white;
-    width: 500px;
-   
-}
-div.loginhead{
-    text-align: center;
-    text-decoration: solid;
-}
-
-div.loginimg{
-    display:inline;
-    width:100px;
-    height:100px;
-}
-legend.lLogin{
-    text-align: center;
-}
-
-
-
-
-body.loginbody{
-    height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;  
-  align-items: center;     
-  background-color: white;  
-}
-
-
-.loginbutton {
-  text-align: center;  
-}
-
-.loginbutton input[type="submit"] {
-  padding: 12px 24px;  
-  border: none;    
-  background-color: rgb(156, 188, 217); 
-  color: rgb(0, 0, 0);       
-  font-size: 16px;     
-  border-radius: 20px; 
-  cursor: pointer;  
-  width: 40%;         
-  transition: background-color 0.3s, transform 0.3s; 
-}
-
-
-.loginbutton input[type="submit"]:hover {
-  background-color: rgb(132, 193, 247);  
-  transform: scale(1.05);      
-}
-
-.loginbutton input[type="submit"]:focus {
-  outline: none;  
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);  
-}
-h1{
-    font-family: sans-serif;
-}
-
-.loginbox input[type="text"] {
-  padding: 12px 24px;  
-  border: 2px solid;    
-  background-color: aliceblue(197, 220, 240); 
-  color: rgb(0, 0, 0);       
-  font-size: 16px;     
- 
-  cursor: pointer;  
-  width: 40%;         
-  transition: background-color 0.3s, transform 0.3s; 
-}
-.loginbox input[type="password"] {
-  padding: 12px 24px;  
-  border: 2px solid;    
-  background-color: aliceblue(197, 220, 240); 
-  color: rgb(0, 0, 0);       
-  font-size: 16px;     
- 
-  cursor: pointer;  
-  width: 40%;         
-  transition: background-color 0.3s, transform 0.3s; 
-}
-
-.login.img{
-width: 10px;
-    margin-right: 40px;
-
-}
-
-.login{
+main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    gap: 30px;
+    padding: 20px 0;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.login img {
+    max-width: 120px;
+    height: auto;
+    margin: 0;
+}
+
+div.loginbox {
+    width: 95%; 
+    max-width: 400px;
+    background-color: aliceblue;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid aliceblue;
+    border-radius: 40px;
+    height: auto;
+    box-shadow: 2px 2px 5px black, -2px -2px 5px white;
+}
+
+.loginbox input[type="text"],
+.loginbox input[type="password"] {
+    padding: 12px 24px; 
+    border: 2px solid; 
+    background-color: aliceblue; 
+    color: rgb(0, 0, 0); 
+    font-size: 16px; 
+    cursor: pointer; 
+    width: 80%; 
+    margin: 5px auto 15px auto; 
+    box-sizing: border-box; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.loginbutton input[type="submit"] {
+    padding: 12px 24px; 
+    border: none; 
+    background-color: rgb(156, 188, 217); 
+    color: rgb(0, 0, 0); 
+    font-size: 16px; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    width: 60%; 
+    transition: background-color 0.3s, transform 0.3s; 
+    margin-top: 15px;
+}
+
+div.loginhead { text-align: center; text-decoration: solid; }
+.loginbutton { text-align: center; }
+.loginbutton input[type="submit"]:hover { background-color: rgb(132, 193, 247); transform: scale(1.05); }
+.loginbutton input[type="submit"]:focus { outline: none; box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4); }
+h1 { font-family: sans-serif; }
+
+
+/* Reglas de Escritorio (Desktop/Tablet) */
+@media (min-width: 600px) {
+
+    .login {
+        flex-direction: row; 
+        height: 80vh; 
+        gap: 50px;
+    }
+    
+    .loginbox input[type="text"],
+    .loginbox input[type="password"],
+    .loginbutton input[type="submit"] {
+        width: 40%; 
+    }
+
+    .login img {
+        max-width: 400px;
+    }
 }
