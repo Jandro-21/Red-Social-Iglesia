@@ -102,3 +102,128 @@ h1 { font-family: sans-serif; }
         max-width: 400px;
     }
 }
+
+
+
+.feedhead{
+background-color: #f9f9f9;
+padding: 0%;
+margin: 0%;
+border: #000000 1px solid;
+border-radius: 15px;
+box-shadow: #507cff 0 0 0 3px rgba(55, 56, 57, 0.4);
+}
+
+li.fnav{
+    display: inline;
+    text-decoration: none;
+    font-family:  sans-serif;
+}
+
+.fa{
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    cursor:pointer;
+    display: flex;
+   font-size: 50px;
+   align-self: center;
+   flex-direction: column;        
+    align-items: center; 
+    justify-content: center; 
+   
+
+}
+
+.fa:hover{
+scale: 1.2;
+color: aqua;
+}
+
+.feedul{
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;        
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.feedbox {
+    border: 1px solid #333;
+    border-radius: 30px;
+    width: 90%;             
+    max-width: 700px;       
+    height: auto;
+    box-shadow: 2px 2px 5px rgb(33, 32, 32), -2px -2px 5px rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    background-color: white; 
+    margin: 0;
+}
+
+img.pfp{
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 10%;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+   
+}
+
+h1.username{
+    margin-left:15px;
+    margin-top: 13px;
+    
+}
+
+p.comment{
+    font-size: 30px;
+    border:1px solid #333;
+    border-radius: 30px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin: 10px;
+    padding: 12px;
+}
+
+@media (max-width: 768px) {
+    
+    .feedul {
+        flex-direction: column; 
+        gap: 10px;              
+        padding-bottom: 15px;   
+    }
+
+   
+    .fa {
+        font-size: 24px;
+        width: 100%;     
+    }
+    
+    
+    .feedhead {
+        width: 95%;      
+        margin: 0 auto;  
+    }
+}
+
+feed-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 30px;              
+    width: 100%;           
+    padding-top: 20px;      
+}
+
+@media (max-width: 768px) {
+    .feedbox {
+        width: 90%; /* En móvil queremos que ocupe casi todo el ancho */
+    }
+}
